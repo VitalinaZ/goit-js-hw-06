@@ -4,9 +4,16 @@ function handleSubmit(event) {
   event.preventDefault();
   const {elements: { email, password }
   } = event.currentTarget;
+
     if (email.value === "" || password.value === "") {
-    return console.dir("Please fill in all the fields!");
+    return alert("Please fill in all the fields!");
     }
-    console.dir(`Login: ${email.value}, Password: ${password.value}`);
+ (`Login: ${email.value}, Password: ${password.value}`);
+    const formSubmit = {
+        email:email.value,
+        password:password.value,
+    };
+ console.dir(formSubmit);
   event.currentTarget.reset();
+  
 };
